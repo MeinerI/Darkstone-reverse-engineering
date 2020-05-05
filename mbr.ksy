@@ -91,7 +91,7 @@ types:
 
   float8:
     seq:
-      - id: bytes4
+      - id: bytes4 # цвет ?
         type: u1
         repeat: expr
         repeat-expr: 4
@@ -101,12 +101,12 @@ types:
         repeat: expr
         repeat-expr: 8
 
-      - id: weight4 # где то похоже на грани 
+      - id: polygon4 # tri or quad
         type: u2
         repeat: expr
         repeat-expr: 4
-       
-      - id: short_array # a5_20_00_00_0f_00
+
+      - id: short_array # 6 байт окончания / в конце может текстура, как в o3d ?
         type: u2
         repeat: expr
         repeat-expr: 3
