@@ -8,9 +8,9 @@ meta:
 seq:
   - id: one
     type: u2
-  - id: block_count
+  - id: block_count # количество саб-мешей
     type: u4
-  - id: blocks
+  - id: blocks 
     type: block
     repeat: expr
     repeat-expr: block_count
@@ -36,13 +36,13 @@ types:
       repeat: expr
       repeat-expr: 27
 
-    - id: count_triplet
+    - id: count_triplet # количество вершин
       type: u4
 
     - id: count_quadrat
       type: u4
 
-    - id: triplets
+    - id: triplets # xyz 
       type: triplet
       repeat: expr
       repeat-expr: count_triplet
