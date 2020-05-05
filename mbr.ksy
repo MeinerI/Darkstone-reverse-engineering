@@ -52,7 +52,8 @@ types:
       repeat: expr
       repeat-expr: count_quadrat
 
-    - id: triplet_int # ������ �� �������� ?
+    # не проверял, потому что у меня нет игры 
+    - id: triplet_int # ссылки на текстуры для полигонов ?
       type: u4
       repeat: expr
       repeat-expr: count_triplet
@@ -100,12 +101,12 @@ types:
         repeat: expr
         repeat-expr: 8
 
-      - id: weight4
+      - id: weight4 # где то похоже на грани 
         type: u2
         repeat: expr
         repeat-expr: 4
        
-      - id: array__a5_20_00_00_0f_00
+      - id: short_array # a5_20_00_00_0f_00
         type: u2
         repeat: expr
         repeat-expr: 3
