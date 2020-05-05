@@ -23,7 +23,7 @@ types:
       - id: name
         type: str
         encoding: ASCII
-        size: 60 #################
+        size: 60 # много доп инфы
       - id: float3
         type: f4
         repeat: expr
