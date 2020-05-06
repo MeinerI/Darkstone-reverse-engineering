@@ -18,7 +18,7 @@ sealed class Test
         {
           using (BinaryReader br = new BinaryReader(File.Open(fileIn, FileMode.Open)))
           {
-          using (StreamWriter sw = new StreamWriter(fileIn + ".obj"))
+          using (StreamWriter sw = new StreamWriter(fileIn + ".ply"))
           {
                     O3dModel o3d = new O3dModel();
 
