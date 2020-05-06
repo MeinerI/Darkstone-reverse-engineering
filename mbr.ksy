@@ -22,14 +22,15 @@ types:
   block:
     seq:
 
-    - id: str_count # 02 00
+    - id: str_count # 01 00 или 02 00
       type: u2
+
     - id: string48s
       type: str
       size: 48
       encoding: ASCII
       repeat: expr
-      repeat-expr: str_count
+      repeat-expr: 2
 
     - id: floats_q
       type: f4
@@ -60,6 +61,7 @@ types:
 
     - id: count_float
       type: u4
+      if: str_count == 2
 
     - id: float_8
       type: float8
@@ -101,7 +103,7 @@ types:
         repeat: expr
         repeat-expr: 8
 
-      - id: polygon4 # tri or quad (где то да, а где то 65535) Triangle strip?
+      - id: polygon4 # tri or quad (где то да, а где то 65535) теперь больше похоже на грани, хотя бывает и по одному не 65535 значению
         type: u2
         repeat: expr
         repeat-expr: 4
