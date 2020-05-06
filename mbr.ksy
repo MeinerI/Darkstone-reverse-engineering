@@ -91,17 +91,17 @@ types:
 
   float8:
     seq:
-      - id: bytes4 # цвет ?
+      - id: bytes4 # цвет ?  (как в o3d)
         type: u1
         repeat: expr
         repeat-expr: 4
 
-      - id: floats8
+      - id: floats8 # текстурные координаты = для 6 для tri, 8 для quad ? (как в o3d)
         type: f4
         repeat: expr
         repeat-expr: 8
 
-      - id: polygon4 # tri or quad
+      - id: polygon4 # tri or quad (где то да, а где то 65535) Triangle strip?
         type: u2
         repeat: expr
         repeat-expr: 4
