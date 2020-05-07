@@ -2,9 +2,7 @@ meta:
   id: ska
   file-extension: ska
   endian: le
-
 #############################################
-
 seq:
   - id: one
     type: u2
@@ -14,7 +12,6 @@ seq:
     type: block
     repeat: expr
     repeat-expr: block_count
-
 #############################################
 types:
 #############################################
@@ -22,10 +19,30 @@ types:
     seq:
     - id: short_value
       type: u2
-    - id: string64x66
-      type: str
-      size: 64
-      encoding: ASCII
+    - id: string_not
+      type: string64x66
       repeat: expr
       repeat-expr: 66
 #############################################
+  string64x66:
+    seq:
+      - id: str
+        type: str
+        size: 4
+        encoding: ASCII
+      - id: floats8
+        type: f4
+        repeat: expr
+        repeat-expr: 8
+      - id: four
+        size: 4
+      - id: shorts3
+        type: u2
+        repeat: expr
+        repeat-expr: 3
+      - id: hz
+        type: u2
+      - id: bytes
+        size: 4
+        repeat: expr
+        repeat-expr: 4
