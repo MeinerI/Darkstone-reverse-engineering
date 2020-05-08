@@ -6,7 +6,7 @@ meta:
 #############################################
 
 seq:
-  - id: block_count # количество саб-мешей
+  - id: block_count # СЃР°Р±РјРµС€РµР№
     type: u4
 
   - id: blocks 
@@ -39,10 +39,10 @@ types:
       repeat: expr
       repeat-expr: 6
 
-    - id: vertex_count # количество вершин
+    - id: vertex_count # РІРµСЂС€РёРЅ
       type: u4
 
-    - id: face_count # граней 
+    - id: face_count # РіСЂР°РЅРµР№
       type: u4
 
     - id: face_count_2
@@ -76,12 +76,12 @@ types:
 
   float8:
     seq:
-      - id: color # цвет ? (как в o3d)
+      - id: color # С†РІРµС‚ ? (РєР°Рє РІ o3d)
         type: u1
         repeat: expr
         repeat-expr: 4
 
-      - id: texture_coord # для 6 для tri, 8 для quad ? (как в o3d)
+      - id: texture_coord # РґР»СЏ 6 РґР»СЏ tri, 8 РґР»СЏ quad ? (РєР°Рє РІ o3d)
         type: f4
         repeat: expr
         repeat-expr: 8
@@ -91,7 +91,7 @@ types:
         repeat: expr
         repeat-expr: 4
 
-      - id: hz_array # 6 байт окончания / в конце может текстура, как в o3d ?
+      - id: hz_array # 6 Р±Р°Р№С‚ РѕРєРѕРЅС‡Р°РЅРёСЏ / РІ РєРѕРЅС†Рµ РјРѕР¶РµС‚ С‚РµРєСЃС‚СѓСЂР°, РєР°Рє РІ o3d ?
         type: u2
         repeat: expr
         repeat-expr: 3
