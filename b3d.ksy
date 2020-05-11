@@ -34,7 +34,7 @@ types:
       size: 48
       encoding: ASCII
     
-    - id: floats6
+    - id: floats6 # boundingBox ?
       type: f4
       repeat: expr
       repeat-expr: 6
